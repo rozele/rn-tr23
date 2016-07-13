@@ -1,0 +1,11 @@
+{
+  "name": "react-native-windows-map",
+  "version": "0.0.1",
+  "description": "Map components for react-native-windows",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Rozell",
+  "license": "MIT"
+}
