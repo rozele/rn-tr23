@@ -1,6 +1,7 @@
 using ReactNative;
 using ReactNative.Modules.Core;
 using ReactNative.Shell;
+using ReactWindowsMap;
 using System.Collections.Generic;
 
 namespace myapp
@@ -32,6 +33,7 @@ namespace myapp
                 return new List<IReactPackage>
                 {
                     new MainReactPackage(),
+                    new ReactWindowsMapPackage(),
                 };
             }
         }
