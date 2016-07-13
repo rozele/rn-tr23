@@ -1,4 +1,7 @@
-﻿using ReactNative.UIManager;
+﻿using Newtonsoft.Json.Linq;
+using ReactNative.UIManager;
+using ReactNative.UIManager.Annotations;
+using Windows.Devices.Geolocation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls.Maps;
 
@@ -12,6 +15,23 @@ namespace ReactWindowsMap.Views
             {
                 return "WindowsMapView";
             }
+        }
+
+        [ReactProp("center")]
+        public void SetCenter(MapControl parent, JObject location)
+        {
+            var lat = location.Value<double>("lat");
+            var lon = location.Value<double>("lon");
+            var alt = location.Value<double>("alt");
+
+            var position = new BasicGeoposition
+            {
+                Latitude = lat,
+                Longitude = lon,
+                Altitude = alt,
+            };
+
+            parent.Center = new Geopoint(position);
         }
 
         public override void AddView(MapControl parent, DependencyObject child, int index)
