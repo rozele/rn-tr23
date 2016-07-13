@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ReactMapItemManager.cs" />
     <Compile Include="Views\ReactMapViewManager.cs" />
     <EmbeddedResource Include="Properties\ReactWindowsMap.rd.xml" />
   </ItemGroup>
