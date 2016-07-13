@@ -25,8 +25,26 @@ class MapViewWindows extends React.Component {
     }
 }
 
+class MapItemWindows extends React.Component {
+    static propTypes = {
+        ...View.propTypes,
+        location: LocationPropType,
+    }
+
+    render() {
+        return (
+            <WindowsMapItem
+                location={this.props.location}>
+                {this.props.children}
+            </WindowsMapItem>
+        );
+    }
+}
+
 const WindowsMapView = requireNativeComponent('WindowsMapView', MapViewWindows);
+const WindowsMapItem = requireNativeComponent('WindowsMapItem', MapItemWindows);
 
 module.exports = {
     MapViewWindows,
+    MapItemWindows,
 };
